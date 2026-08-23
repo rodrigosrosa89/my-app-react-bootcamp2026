@@ -1,6 +1,9 @@
 import "./App.css";
 import { ListaArrays } from "./capitulo-arrays/components/ListaArrays";
 import Profile, { Job } from "./capitulo-componentes/components/Profile";
+import { DoubleNumber } from "./capitulo-funcoes/components/DoubleNumber";
+import { SquareNumber } from "./capitulo-funcoes/components/SquareNumber";
+import { Step } from "./capitulo-funcoes/components/Step";
 import { List } from "./capitulo-jsx/components/List";
 import { Coffe } from "./capitulo-props/components/Coffe";
 import { Recipe } from "./capitulo-props/components/Recipe";
@@ -57,6 +60,9 @@ function App() {
         </Recipe>
       </div>
       <ListaArrays />
+      <DoubleNumber number={5} />
+      <SquareNumber number={5} />
+      <Step instruction="Rodrigo curso React" />
     </>
   );
 }
