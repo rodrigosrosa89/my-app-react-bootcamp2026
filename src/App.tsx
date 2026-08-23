@@ -1,6 +1,6 @@
 import "./App.css";
-import { Job } from "./capitulo-componentes/components/Profile";
-import Profile from "./capitulo-componentes/components/Profile";
+import { ListaArrays } from "./capitulo-arrays/components/ListaArrays";
+import Profile, { Job } from "./capitulo-componentes/components/Profile";
 import { List } from "./capitulo-jsx/components/List";
 import { Coffe } from "./capitulo-props/components/Coffe";
 import { Recipe } from "./capitulo-props/components/Recipe";
@@ -56,6 +56,7 @@ function App() {
           />
         </Recipe>
       </div>
+      <ListaArrays />
     </>
   );
 }

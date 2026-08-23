@@ -34,3 +34,15 @@
   color: white;
   margin-top: 24px;
 }
+
+.top-sale-coffe {
+  padding: 24px;
+  background-color: brown;
+  color: white;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.top-sale-coffe p {
+  margin: 0;
+}
