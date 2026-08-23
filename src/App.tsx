@@ -2,6 +2,7 @@ import "./App.css";
 import { Job } from "./capitulo-componentes/components/Profile";
 import Profile from "./capitulo-componentes/components/Profile";
 import { List } from "./capitulo-jsx/components/List";
+import { Coffe } from "./capitulo-props/components/Coffe";
 import { Recipe } from "./capitulo-props/components/Recipe";
 
 function App() {
@@ -14,38 +15,46 @@ function App() {
       <Job />
       <List />
       <div className="recipe-list">
-        <Recipe
-          imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
-          imageWidth={300}
-          coffe={{
-            title: "Título da imagem1",
-            description: "Descrição da imagem1",
-          }}
-        />
-        <Recipe
-          imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
-          imageWidth={300}
-          coffe={{
-            title: "Título da imagem2",
-            description: "Descrição da imagem2",
-          }}
-        />
-        <Recipe
-          imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
-          imageWidth={300}
-          coffe={{
-            title: "Título da imagem3",
-            description: "Descrição da imagem3",
-          }}
-        />
-        <Recipe
-          imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
-          imageWidth={300}
-          coffe={{
-            title: "Título da imagem4",
-            description: "Descrição da imagem4",
-          }}
-        />
+        <Recipe onClick={() => alert("Receita 1 selecionada!")}>
+          <Coffe
+            imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
+            imageWidth={300}
+            coffe={{
+              title: "Título da imagem1",
+              description: "Descrição da imagem1",
+            }}
+          />
+        </Recipe>
+        <Recipe onClick={() => alert("Receita 2 selecionada!")}>
+          <Coffe
+            imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
+            imageWidth={300}
+            coffe={{
+              title: "Título da imagem2",
+              description: "Descrição da imagem2",
+            }}
+          />
+        </Recipe>
+        <Recipe onClick={() => alert("Receita 3 selecionada!")}>
+          <Coffe
+            imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
+            imageWidth={300}
+            coffe={{
+              title: "Título da imagem3",
+              description: "Descrição da imagem3",
+            }}
+          />
+        </Recipe>
+        <Recipe onClick={() => alert("Receita 4 selecionada!")}>
+          <Coffe
+            imageSrc="https://www.w3schools.com/html/pic_trulli.jpg"
+            imageWidth={300}
+            coffe={{
+              title: "Título da imagem4",
+              description: "Descrição da imagem4",
+            }}
+          />
+        </Recipe>
       </div>
     </>
   );

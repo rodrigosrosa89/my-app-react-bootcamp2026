@@ -1,13 +1,22 @@
-import type { CoffeProps } from "../interfaces/coffes";
-import { Coffe } from "./Coffe";
+import type { PropsWithChildren } from "react";
 
-export function Recipe(props: CoffeProps) {
+interface Props {
+  onClick?: () => void;
+}
+
+export function Recipe({ children, onClick }: PropsWithChildren<Props>) {
+  function handleClick() {
+    if (onClick) {
+      onClick();
+    }
+  }
+
   return (
     <>
       <div className="card">
-        <Coffe {...props} />
-        <button className="button" onClick={() => alert("Clicou no botão!")}>
-          Clique aqui
+        {children}
+        <button className="button" onClick={handleClick}>
+          Ver receitinhaaaa
         </button>
       </div>
     </>
