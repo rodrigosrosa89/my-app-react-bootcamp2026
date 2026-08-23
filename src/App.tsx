@@ -1,6 +1,11 @@
 import "./App.css";
 import { ListaArrays } from "./capitulo-arrays/components/ListaArrays";
 import Profile, { Job } from "./capitulo-componentes/components/Profile";
+import { Button } from "./capitulo-eventos/components/Button";
+import { DarkModeButton } from "./capitulo-eventos/components/DarkModeButton";
+import { Formulario } from "./capitulo-eventos/components/Formulario";
+import { Post } from "./capitulo-eventos/components/Post";
+import { SwitchThemeButton } from "./capitulo-eventos/components/SwitchThemeButton";
 import { DoubleNumber } from "./capitulo-funcoes/components/DoubleNumber";
 import { SquareNumber } from "./capitulo-funcoes/components/SquareNumber";
 import { Step } from "./capitulo-funcoes/components/Step";
@@ -10,6 +15,10 @@ import { Recipe } from "./capitulo-props/components/Recipe";
 
 function App() {
   console.log("VARIAVEL VITE_API_URL:", import.meta.env.VITE_API_URL);
+
+  const handleHoras = () => {
+    alert("Agora são: " + new Date().toLocaleTimeString());
+  };
 
   return (
     <>
@@ -63,6 +72,22 @@ function App() {
       <DoubleNumber number={5} />
       <SquareNumber number={5} />
       <Step instruction="Rodrigo curso React" />
+      <DarkModeButton />
+      <SwitchThemeButton theme="dark"> Escuro </SwitchThemeButton>
+      <SwitchThemeButton theme="light">Claro </SwitchThemeButton>
+      <Button handleClick={handleHoras}>
+        Que horas são? (Clique aqui para saber)
+      </Button>
+      <br></br>
+      <Post
+        imageSource="https://images.google.com.br/images/branding/google_wordmark/v1/1x/googlelogo_color_272x92dp.png"
+        alternative="xxxx"
+        user="rodcruzeiro"
+        text="Texto de exemplo"
+        onLikePost={() => alert("Deu bom!")}
+      />
+      <br></br>
+      <Formulario />
     </>
   );
 }

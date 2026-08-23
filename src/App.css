@@ -46,3 +46,50 @@
 .top-sale-coffe p {
   margin: 0;
 }
+
+.button-event {
+  background-color: brown;
+  color: white;
+  margin: 0 1rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 150px;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #242424;
+}
+
+.post {
+  background-color: #f2f2f2;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.post img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.post,
+.post img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+form .button-event {
+  width: 150px;
+}
