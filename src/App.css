@@ -1,0 +1,36 @@
+.recipe-title,
+.recipe-description {
+  margin: 0;
+}
+
+.recipe-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+.recipe-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  width: 300px;
+  min-height: 300px;
+  padding: 24px;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.button {
+  background-color: brown;
+  color: white;
+  margin-top: 24px;
+}
