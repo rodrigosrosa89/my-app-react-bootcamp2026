@@ -2,8 +2,14 @@ import { useEffect, useState } from "react";
 import { ProductItemDumb } from "./ProdutctItemDumb";
 import { API_BASE_URL } from "../../settings.ts";
 
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+}
+
 export default function ProductList() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {

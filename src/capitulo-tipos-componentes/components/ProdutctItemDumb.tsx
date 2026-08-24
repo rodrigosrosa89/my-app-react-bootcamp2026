@@ -1,4 +1,12 @@
-export function ProductItemDumb({ product }) {
+interface Props {
+  product: {
+    id: string;
+    name: string;
+    description: string;
+  };
+}
+
+export function ProductItemDumb({ product }: Props) {
   return (
     <ul>
       <li>
