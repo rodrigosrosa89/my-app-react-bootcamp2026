@@ -12,6 +12,14 @@ import { Step } from "./capitulo-funcoes/components/Step";
 import { List } from "./capitulo-jsx/components/List";
 import { Coffe } from "./capitulo-props/components/Coffe";
 import { Recipe } from "./capitulo-props/components/Recipe";
+import Copyright from "./capitulo-renderizacao/components/Copyright";
+import FancyText from "./capitulo-renderizacao/components/FancyText";
+import Item from "./capitulo-renderizacao/components/Index";
+import {
+  IndexTernario,
+  type Props,
+} from "./capitulo-renderizacao/components/IndexTernario";
+import InspirationGenerator from "./capitulo-renderizacao/components/InspirationGenerator";
 
 function App() {
   console.log("VARIAVEL VITE_API_URL:", import.meta.env.VITE_API_URL);
@@ -20,9 +28,40 @@ function App() {
     alert("Agora são: " + new Date().toLocaleTimeString());
   };
 
+  const listaDeItens: Props[] = [
+    {
+      id: "travesseiro",
+      name: "Travesseiro",
+      check: true,
+      counter: 2,
+    },
+    {
+      id: "colchao",
+      name: "Colchão",
+      check: false,
+      counter: 3,
+    },
+    {
+      id: "roupaCama",
+      name: "Roupa de cama",
+      check: true,
+      counter: 3,
+    },
+    {
+      id: "camiseta",
+      name: "Camiseta",
+      check: false,
+      counter: 3,
+    },
+  ];
+
   return (
     <>
       <h1>Início desenvolvimento</h1>
+      <FancyText title text="App de inspiração" />
+      <InspirationGenerator>
+        <Copyright year="2026" />
+      </InspirationGenerator>
       <Profile />
       <Job />
       <List />
@@ -88,6 +127,26 @@ function App() {
       />
       <br></br>
       <Formulario />
+      <Item name="Rodrigo" check={true} />
+      <Item name="Rodrigo Jr" />
+      <Item name="Rodrigo Pai" check={true} />
+      {listaDeItens.map((i) => {
+        if (i.check) {
+          return null;
+        }
+        return (
+          <>
+            <Item key={i.id} name={i.name} check={i.check} />
+            <IndexTernario
+              id={i.id}
+              key={i.id}
+              name={i.name}
+              check={i.check}
+              counter={i.counter}
+            />
+          </>
+        );
+      })}
     </>
   );
 }

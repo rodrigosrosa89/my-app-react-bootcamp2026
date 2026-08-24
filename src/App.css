@@ -93,3 +93,28 @@ form {
 form .button-event {
   width: 150px;
 }
+
+.item {
+  background-color: #030303;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.title {
+  color: #007aa3;
+  text-decoration: underline;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+.colorbox {
+  height: 100px;
+  width: 100px;
+  margin: 8px auto;
+}
