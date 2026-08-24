@@ -118,3 +118,38 @@ form .button-event {
   width: 100px;
   margin: 8px auto;
 }
+
+.button-count {
+  background-color: #121212;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.list-products {
+  text-align: left;
+  padding: 0;
+}
+
+.list-products li {
+  list-style: none;
+  color: #191919;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  width: 500px;
+}
+
+.list-products li .price-products {
+  color: greenyellow;
+}
+
+.list-products li p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.list-products li p {
+  margin: 0;
+}

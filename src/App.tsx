@@ -20,6 +20,9 @@ import {
   type Props,
 } from "./capitulo-renderizacao/components/IndexTernario";
 import InspirationGenerator from "./capitulo-renderizacao/components/InspirationGenerator";
+import ComponentClassCounter from "./capitulo-tipos-componentes/components/ComponentClassCounter";
+import ComponentFuncionalCounter from "./capitulo-tipos-componentes/components/ComponentFuncionalCounter";
+import ProductList from "./capitulo-tipos-componentes/components/ProductsList";
 
 function App() {
   console.log("VARIAVEL VITE_API_URL:", import.meta.env.VITE_API_URL);
@@ -65,6 +68,9 @@ function App() {
       <Profile />
       <Job />
       <List />
+      <ComponentFuncionalCounter message="Functional Component" />
+      <ComponentClassCounter />
+      <ProductList />
       <div className="recipe-list">
         <Recipe onClick={() => alert("Receita 1 selecionada!")}>
           <Coffe
